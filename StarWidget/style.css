@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui;
+  color: #555;
+  background-color: #f7f7f7;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+table {
+  margin: 0 auto;
+  text-align: center;
+  border-collapse: collapse;
+  border: 1px solid #d4d4d4;
+  font-size: 20px;
+  background: #fff;
+}
+
+table th,
+table tr:nth-child(2n + 2) {
+  background: #e7e7e7;
+}
+
+table th,
+table td {
+  padding: 20px 50px;
+}
+
+table th {
+  border-bottom: 1px solid #d4d4d4;
+}
+
+.stars-outer {
+  display: inline-block;
+  position: relative;
+  font-family: FontAwesome;
+}
+
+.stars-outer::before {
+  content: "\f006 \f006 \f006 \f006 \f006";
+}
+
+.stars-checked {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  opacity: 1;
+}
+
+.stars-checked::before {
+  content: "\f005 \f005 \f005 \f005 \f005";
+  color: #000;
+}
+
+.stars-selected {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  opacity: 0;
+}
+
+.stars-selected::before {
+  content: "\f005 \f005 \f005 \f005 \f005";
+  color: #808080;
+}
